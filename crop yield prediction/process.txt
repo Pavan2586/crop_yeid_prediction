@@ -1,0 +1,30 @@
+open anaconda prompt and run thw follwing commands:
+
+(base) C:\Users\thineti pavan kumar>conda activate project
+---------------------------------------------------------------
+For notebook path:
+
+(project) C:\Users\thineti pavan kumar> cdC:\Users\thineti pavan kumar\Desktop\project\crop yield prediction
+---------------------------------------------------------------
+(project) C:\Users\thineti pavan kumar\Desktop\project\crop yield prediction>jupyter notebook
+-------------------------------------------------------------
+
+To open django framework:#
+Take another anaconda prompt:
+(base) C:\Users\thineti pavan kumar>conda activate project
+----------------------------------------------------------------
+
+(project)cd C:\Users\thineti pavan kumar\Desktop\project\crop yield prediction\CropAndYieldPredictionUsingMachineLearning\CropAndYieldPredictionUsingMachineLearning
+
+-----------------------------------------------------------------
+
+(project) C:\Users\thineti pavan kumar\Desktop\project\crop yield prediction\CropAndYieldPredictionUsingMachineLearning\CropAndYieldPredictionUsingMachineLearning>python manage.py runserver
+----------------------------------------------------------
+copy the http url and paste in the browser
+http://127.0.0.1:8000/
+--------------------------------------------------------------
+
+
+project 
+C:\Users\thineti pavan kumar\Desktop\project\crop yield prediction\CropAndYieldPredictionUsingMachineLearning.rar\CropAndYieldPredictionUsingMachineLearning
+

@@ -1,0 +1,63 @@
+{% load  static %}
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>Agriculture science</title>
+
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+
+    <script src="{% static 'js/modernizr.custom.js'%}"></script>
+
+</head>
+<body>
+<!-- header -->
+	<div class="banner">
+		<div class="container">
+			<div class="header">
+				<div class="head-nav">
+						<span class="menu"> </span>
+							<ul class="cl-effect-1">
+								<li><a href="/">Predict Crop and its Yield</a></li>
+							</ul>
+				</div>
+				<div class="social">
+						<ul>
+							<li><a href="#"><i class="fb"></i></a></li>
+							<li><a href="#"><i class="twt"></i></a></li>
+							<li><a href="#"><i class="goog"></i></a></li>
+								<div class="clearfix"> </div>
+						</ul>
+					</div>
+						<div class="clearfix"> </div>
+			</div>			
+					<!-- script-for-nav -->
+					<script>
+						$( "span.menu" ).click(function() {
+						  $( ".head-nav ul" ).slideToggle(300, function() {
+							// Animation complete.
+						  });
+						});
+					</script>
+				<!-- script-for-nav -->
+            <br/><br/><br/><br/><br/><br/><br/>
+            <a href="/predict"><img src="{% static 'images/yield.png'%} " class="img-responsive" alt="" /></a>
+		</div>
+	</div>
+<!-- header -->
+	<div class="footer">
+		<div class="container">
+		<p>© 2020 All rights reserved | Design by <a href="http://www.voidmaintechnologies.com/">Voidmain Technologies</a></p>
+		</div>
+	</div>
+<!-- generation -->
+</body>
+</html>
+				

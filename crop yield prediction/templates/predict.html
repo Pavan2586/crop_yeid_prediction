@@ -1,0 +1,174 @@
+{% load  static %}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <title>Agriculture science</title>
+
+    <link href="{% static 'css/bootstrap.css'%}" rel="stylesheet" type="text/css" media="all">
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css" media="all" />
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,700,800' rel='stylesheet' type='text/css'>
+
+    <script src="{% static 'js/jquery.min.js'%}"></script>
+
+    <script src="{% static 'js/modernizr.custom.js'%}"></script>
+
+<style>
+	select {
+		width: 100%;
+		color: #898888;
+		outline: none;
+		font-size: 16px;
+		padding: .5em;
+		border: none;
+		font-family:trebuchet ms, arial, sans-serif;
+		font-size:0.8725em;
+		color: #555;
+		padding: 15px;
+		display: block;
+		width: 98%;
+		background: #FFFFFF;
+		border: 1px solid #5eb703;
+		outline: none;
+		transition: 0.9s;
+		border: 1px solid rgba(117, 95, 165, 0.05);
+		box-shadow: 0px 1px 2px #AFB1B3;
+		font-size: 15px;
+		font-size: 14px;
+	}
+</style>
+
+ <style>
+.myDiv {
+  border: 5px outset red;
+  background-color: lightblue;
+  text-align: center;
+}
+</style>
+
+</head>
+<body>
+<!-- header -->
+	<div class="header">
+				<div class="head-nav">
+						<span class="menu"> </span>
+							<ul class="cl-effect-1">
+								<li><a href="/">Predict Crop and its Yield</a></li>
+							</ul>
+				</div>
+				<div class="social">
+						<ul>
+							<li><a href="#"><i class="fb"></i></a></li>
+							<li><a href="#"><i class="twt"></i></a></li>
+							<li><a href="#"><i class="goog"></i></a></li>
+								<div class="clearfix"> </div>
+						</ul>
+					</div>
+						<div class="clearfix"> </div>
+			</div>
+<!-- header -->
+
+<div class="main_bg">
+<div class="container">
+<div class="main">
+		<div class="section group">	
+				<div class="col span_2_of_4">
+				  <div class="contact-form">
+				  	<h3 class="style">Fill The Following Details for Prediction Crop and Its Yield</h3>
+                      <h3 class="style"><font color="red">{{ output }}</font></h3>
+                      <h3 class="style"><font color="red">{{ error }}</font></h3>
+					       <form action="/predictaction/">
+                           {% csrf_token %}
+                            <div>
+						    	<span><label>SELECT STATE</label></span>
+						    	<span>
+									<select name="State_Name">
+										{% for state in states %}
+                                            <option value="{{ state }}" class="textbox">{{ state }}</option>
+                                        {% endfor %}
+									</select>
+								</span>
+						    </div>
+                            <div>
+						    	<span><label>SELECT SEASON</label></span>
+						    	<span>
+									<select name="Season">
+										{% for season in seasons %}
+                                            <option value="{{ season }}" class="textbox">{{ season }}</option>
+                                        {% endfor %}
+									</select>
+								</span>
+						    </div>
+                           <div>
+						    	<span><label>SELECT CROP</label></span>
+						    	<span>
+									<select name="Crop">
+										{% for crop in crops %}
+                                            <option value="{{ crop }}" class="textbox">{{ crop }}</option>
+                                        {% endfor %}
+									</select>
+								</span>
+						    </div>
+						    <div>
+						    	<span><label>LAND AREA</label></span>
+						    	<span><input name="Area" type="number" class="textbox" style="width:98%;"></span>
+						    </div>
+                            <div>
+                                <span><label>N</label></span>
+                                <span><input name="N" type="text" class="textbox" style="width:98%;"></span>
+                            </div>
+                            <div>
+                                <span><label>P</label></span>
+                                <span><input name="P" type="text" class="textbox" style="width:98%;"></span>
+                            </div>
+                            <div>
+                                <span><label>K</label></span>
+                                <span><input name="K" type="text" class="textbox" style="width:98%;"></span>
+                             </div>
+                             <div>
+                                 <span><label>temperature</label></span>
+                                 <span><input name="temperature" type="text" class="textbox" style="width:98%;"></span>
+                             </div>
+                              <div>
+                                  <span><label>humidity</label></span>
+                                  <span><input name="humidity" type="text" class="textbox" style="width:98%;"></span>
+                              </div>
+                              <div>
+                                  <span><label>ph</label></span>
+                                  <span><input name="ph" type="text" class="textbox" style="width:98%;"></span>
+                              </div>
+                              <div>
+                                  <span><label>rainfall</label></span>
+                                  <span><input name="rainfall" type="text" class="textbox" style="width:98%;"></span>
+                              </div>
+						   <div>
+						   		<span><input type="submit" value="Predict"></span>
+						  </div>
+					    </form>
+
+				    </div>
+  				</div>		
+  			<div class="clear"></div>
+		  </div>
+	</div>
+</div>
+</div>
+
+	<div class="footer">
+		<div class="container">
+		<p>© 2020 All rights reserved | Design by <a href="http://www.voidmaintechnologies.com/">Voidmain Technologies</a></p>
+		</div>
+	</div>
+<!-- generation -->
+</body>
+</html>
+				
